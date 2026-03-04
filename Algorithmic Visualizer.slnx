@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Algorithmic Visualizer.vcxproj" Id="60e40f66-51f6-49bb-a8ad-bd2575ae8831" />
+</Solution>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{60e40f66-51f6-49bb-a8ad-bd2575ae8831}</ProjectGuid>
+    <RootNamespace>AlgorithmicVisualizer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <!-- Win32 Debug -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Win32 Release -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- x64 Debug -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\LUA;$(ProjectDir)Dependencies\Sdl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\Sdl\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- x64 Release -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\Sdl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\Sdl\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- headers (keeping them listed is OK) -->
+    <ClInclude Include="Dependencies\LUA\lapi.h" />
+    <ClInclude Include="Dependencies\LUA\lauxlib.h" />
+    <ClInclude Include="Dependencies\LUA\lcode.h" />
+    <ClInclude Include="Dependencies\LUA\lctype.h" />
+    <ClInclude Include="Dependencies\LUA\ldebug.h" />
+    <ClInclude Include="Dependencies\LUA\ldo.h" />
+    <ClInclude Include="Dependencies\LUA\lfunc.h" />
+    <ClInclude Include="Dependencies\LUA\lgc.h" />
+    <ClInclude Include="Dependencies\LUA\ljumptab.h" />
+    <ClInclude Include="Dependencies\LUA\llex.h" />
+    <ClInclude Include="Dependencies\LUA\llimits.h" />
+    <ClInclude Include="Dependencies\LUA\lmem.h" />
+    <ClInclude Include="Dependencies\LUA\lobject.h" />
+    <ClInclude Include="Dependencies\LUA\lopcodes.h" />
+    <ClInclude Include="Dependencies\LUA\lopnames.h" />
+    <ClInclude Include="Dependencies\LUA\lparser.h" />
+    <ClInclude Include="Dependencies\LUA\lprefix.h" />
+    <ClInclude Include="Dependencies\LUA\lstate.h" />
+    <ClInclude Include="Dependencies\LUA\lstring.h" />
+    <ClInclude Include="Dependencies\LUA\ltable.h" />
+    <ClInclude Include="Dependencies\LUA\ltests.h" />
+    <ClInclude Include="Dependencies\LUA\ltm.h" />
+    <ClInclude Include="Dependencies\LUA\luaconf.h" />
+    <ClInclude Include="Dependencies\LUA\lualib.h" />
+    <ClInclude Include="Dependencies\LUA\lundump.h" />
+    <ClInclude Include="Dependencies\LUA\lvm.h" />
+    <ClInclude Include="Dependencies\LUA\lzio.h" />
+    <ClInclude Include="Dependencies\Sdl\include\SDL.h" />
+    <ClInclude Include="Dependencies\Sdl\include\SDL_ttf.h" />
+    <ClInclude Include="Events.h" />
+    <ClInclude Include="TextRenderer.h" />
+    <ClInclude Include="Visualizer.h" />
+  </ItemGroup>
+  <!-- Removed explicit <Library Include="..."> items. Libraries are linked via AdditionalDependencies above. -->
+  <ItemGroup>
+    <None Include="Dependencies\Sdl\lib\x64\SDL2.dll" />
+    <None Include="Dependencies\Sdl\lib\x64\SDL2_ttf.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Source files: compile only the onelua amalgamation (not l*.c or lua.c) -->
+    <ClCompile Include="Algorithmic Visualizer.cpp" />
+    <ClCompile Include="Dependencies\LUA\lapi.c" />
+    <ClCompile Include="Dependencies\LUA\lauxlib.c" />
+    <ClCompile Include="Dependencies\LUA\lbaselib.c" />
+    <ClCompile Include="Dependencies\LUA\lcode.c" />
+    <ClCompile Include="Dependencies\LUA\lcorolib.c" />
+    <ClCompile Include="Dependencies\LUA\lctype.c" />
+    <ClCompile Include="Dependencies\LUA\ldblib.c" />
+    <ClCompile Include="Dependencies\LUA\ldebug.c" />
+    <ClCompile Include="Dependencies\LUA\ldo.c" />
+    <ClCompile Include="Dependencies\LUA\ldump.c" />
+    <ClCompile Include="Dependencies\LUA\lfunc.c" />
+    <ClCompile Include="Dependencies\LUA\lgc.c" />
+    <ClCompile Include="Dependencies\LUA\linit.c" />
+    <ClCompile Include="Dependencies\LUA\liolib.c" />
+    <ClCompile Include="Dependencies\LUA\llex.c" />
+    <ClCompile Include="Dependencies\LUA\lmathlib.c" />
+    <ClCompile Include="Dependencies\LUA\lmem.c" />
+    <ClCompile Include="Dependencies\LUA\loadlib.c" />
+    <ClCompile Include="Dependencies\LUA\lobject.c" />
+    <ClCompile Include="Dependencies\LUA\lopcodes.c" />
+    <ClCompile Include="Dependencies\LUA\loslib.c" />
+    <ClCompile Include="Dependencies\LUA\lparser.c" />
+    <ClCompile Include="Dependencies\LUA\lstate.c" />
+    <ClCompile Include="Dependencies\LUA\lstring.c" />
+    <ClCompile Include="Dependencies\LUA\lstrlib.c" />
+    <ClCompile Include="Dependencies\LUA\ltable.c" />
+    <ClCompile Include="Dependencies\LUA\ltablib.c" />
+    <ClCompile Include="Dependencies\LUA\ltests.c" />
+    <ClCompile Include="Dependencies\LUA\ltm.c" />
+    <ClCompile Include="Dependencies\LUA\lundump.c" />
+    <ClCompile Include="Dependencies\LUA\lutf8lib.c" />
+    <ClCompile Include="Dependencies\LUA\lvm.c" />
+    <ClCompile Include="Dependencies\LUA\lzio.c" />
+    <ClCompile Include="Events.cpp" />
+    <ClCompile Include="TextRenderer.cpp" />
+    <ClCompile Include="Visualizer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
