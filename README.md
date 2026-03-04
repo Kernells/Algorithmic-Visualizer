@@ -1,4 +1,4 @@
-# Algorithmic Visualizer
+# Algorithmic Visualizer Version 1.0
 
 <img width="800" height="800" alt="Algorithmic-Visualizer" src="Examples/Algorithmic Visualizer.png" />
 
