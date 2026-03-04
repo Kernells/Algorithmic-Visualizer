@@ -21,7 +21,7 @@ Algorithmic Visualizer Comes bundled with the following custom lua functions :
 
 <img width="300" height="300" alt="Sierpinski Triangle" src="Examples/Sierpinski Triangle.png" />
 
-[View the Lua file](Examples/Sierpinski_Triangle.lua)
+[View the Lua file](Examples/Sierpinski%20Triangle.lua)
 
 ### Spiral
 
