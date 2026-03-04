@@ -1,6 +1,8 @@
-# Algorithmic Visualizer Version 1.0
+# Algorithmic Visualizer
 
 <img width="800" height="800" alt="Algorithmic-Visualizer" src="Examples/Algorithmic Visualizer.png" />
+
+### Current version : 1.0
 
 ## What is Algorithmic Visualizer
 
